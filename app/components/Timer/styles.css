@@ -1,7 +1,0 @@
-@import "../../styles/base/_variables";
-
-.timer {
-    font-size: $S;
-    color: $negative;
-    margin-top: 10px;
-}

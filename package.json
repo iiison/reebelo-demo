@@ -7,7 +7,8 @@
     "test": "jest --watch --coverage",
     "start": "webpack-dev-server --config webpack.config.babel.js --color --progress --hot --inline --mode development",
     "analyze": "webpack-dev-server --config webpack.config.babel.js --color --progress --hot --inline --mode development",
-    "prod": "webpack --mode production -p"
+    "prod": "webpack --mode production -p",
+    "prod:analyze": "webpack --mode production -p"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",

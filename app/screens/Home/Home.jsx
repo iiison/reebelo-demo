@@ -15,8 +15,6 @@ function renderProducts({ products }) {
           {products.map(({ name, desc, price, id }) => (
             <li
               className={`col-3_md-4_sm-12 padded-s`}
-              onClick={() => history.push(`/table/${id}`)}
-              role='link'
               key={name}
             >
               <a href={`products/${id}`} className='normal-color grid'>
@@ -30,6 +28,7 @@ function renderProducts({ products }) {
                       <div className={`col-12 grid-middle grid-center ${styles.prodImg}`}>
                         <img
                           alt={name}
+                          itemProp='image'
                           src={`https://via.placeholder.com/250/000000/FFFFFF/?text=${name}`}
                         />
                       </div>
