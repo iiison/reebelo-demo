@@ -1,0 +1,64 @@
+@import "../../styles/base/_variables";
+
+.pinComponent{
+  margin: 5px;
+  /* padding: 0 20px; */
+}
+
+.button {
+  height: 50px;
+  width: 292px;
+  color: $white;
+  background-color: rgb(0, 39, 106);
+  border-radius: 5px;
+  font-size: $M;
+  margin: 5px;
+  cursor: pointer;
+}
+.button:disabled{
+    opacity: 0.3;
+}
+
+.heading1 {
+  font-size: $M;
+  font-weight: $font-bold;
+  margin-top: 3%;
+}
+
+.heading2 {
+  font-size: $M;
+  font-weight: $font-normal;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 0 40px;
+}
+
+.helperText {
+  font-size: $S;
+}
+
+.error {
+    font-size: $S;
+    color: $negative
+}
+
+.inputComponent {
+  padding: 10px;
+
+  &.pinError {
+    input {
+      border-color: $negative;
+      color: $negative;
+    }
+  }
+}
+
+.skipFlow {
+  font-size: $S;
+  margin-top: 20px;
+}
+
+.visibilityToggle img {
+    width: 20px;
+    margin-left: 10px;
+}

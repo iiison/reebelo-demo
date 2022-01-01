@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>> COMPONENT -- Tests Header Header Snapshot Test 1`] = `
+<div
+  className="col-12 t-center "
+>
+  <img
+    className="visaLogo"
+    src={Object {}}
+  />
+  <hr
+    className="divider"
+  />
+</div>
+`;

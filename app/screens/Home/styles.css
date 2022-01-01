@@ -1,0 +1,38 @@
+@import "../../styles/base/_variables";
+
+.productCont {
+  padding: $S;
+  border: 1px solid $theme-lighter;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $theme-light;
+  }
+}
+
+.prodImg {
+  height: 280px;
+
+  img {
+    max-width: 90%;
+  }
+}
+
+.prodName{
+  font-size: $L;
+  color: $theme-light;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.smalls {
+  font-size: $S;
+  margin-left: 5px;
+}
+
+.button {
+  color: $white;
+  background-color: $theme-lighter;
+  cursor: pointer;
+}
+

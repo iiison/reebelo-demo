@@ -1,0 +1,23 @@
+@import "../../styles/base/_variables";
+
+.pinInput {
+    outline: none;
+    width: 50px;
+    height: 70px;
+    margin: 5px;
+    border: none;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: grey;
+    font-size: x-large;
+
+    .error {
+        border-color: $negative;
+        color: $negative;
+    }
+
+    .success {
+        border: $positive;
+        color: $positive;
+    }
+}

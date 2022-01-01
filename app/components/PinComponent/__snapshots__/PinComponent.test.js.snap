@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>> COMPONENT -- Tests PinComponent  • PinComponent DOM Tests PinComponent Snapshot Test 1`] = `
+<div
+  className="pinComponent"
+>
+  <div
+    className="grid col-12 t-center"
+  >
+    <h1
+      className="col-12 heading1"
+    >
+      Heading
+    </h1>
+    <h2
+      className="col-12 heading2"
+    >
+      Subheading
+    </h2>
+    <div
+      className="col-12-center inputComponent"
+    >
+      <input
+        className="t-center pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="password"
+        value=""
+      />
+      <input
+        className="t-center pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="password"
+        value=""
+      />
+      <input
+        className="t-center pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="password"
+        value=""
+      />
+      <input
+        className="t-center pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="password"
+        value=""
+      />
+      <a
+        className="visibilityToggle"
+        href="#"
+        onClick={[Function]}
+      >
+        <img
+          src={Object {}}
+        />
+      </a>
+    </div>
+    <p
+      className="col-12 helperText"
+    />
+    <p
+      className="col-12"
+    >
+      
+    </p>
+    <div
+      className="col-12-center"
+    >
+      <button
+        className="button"
+        onClick={[Function]}
+        type="button"
+      >
+        CONFIRM
+      </button>
+    </div>
+    <a
+      className="col-12 skipFlow"
+      href="#"
+    />
+  </div>
+</div>
+`;

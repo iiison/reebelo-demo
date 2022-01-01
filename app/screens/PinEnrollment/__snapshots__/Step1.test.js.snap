@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>> SCREEN -- Tests Pin Enrollment Step1 • Pin Enrollment Step1 DOM Tests Step1 Snapshot Test 1`] = `
+<div>
+  <div
+    className="grid col-12"
+  >
+    <h1
+      className="col-12"
+    >
+      create your pin
+    </h1>
+    <h2
+      className="col-12"
+    >
+      enabling faster payments on your Visa **** 2313
+    </h2>
+    <div
+      className="col-12 grid"
+    >
+      <input
+        className="pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="tel"
+        value=""
+      />
+      <input
+        className="pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="tel"
+        value=""
+      />
+      <input
+        className="pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="tel"
+        value=""
+      />
+      <input
+        className="pinInput"
+        max={9}
+        maxLength={1}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="tel"
+        value=""
+      />
+    </div>
+    <p
+      className="col-12"
+    />
+    <p
+      className="col-12"
+    />
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Confirm
+    </button>
+  </div>
+</div>
+`;

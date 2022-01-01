@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>> COMPONENT -- Tests PinInputUnit PinComponent Snapshot Test 1`] = `
+<input
+  className="t-center pinInput"
+  max={9}
+  maxLength={1}
+  min={0}
+  onChange={[Function]}
+  type="tel"
+  value=""
+/>
+`;

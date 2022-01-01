@@ -1,0 +1,6 @@
+{
+  "alpha": "http://localhost:8445/vies-service/",
+  "prod": "https://sl73viessapd001:8443/vies-service/",
+  "test": "https://jsonplaceholder.typicode.com/",
+  "dummy": "https://sl73viessapd001:8443/vies-service/v1/device/7c139b179e9c0e3372c1145ae9eef8a420039cb85b432a01/"
+}

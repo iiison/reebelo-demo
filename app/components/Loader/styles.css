@@ -1,0 +1,106 @@
+@import "../../styles/base/_variables";
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFFCC;
+}
+
+.loaderCont {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  max-width: 25%;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  > div {
+    background-color: #000;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 2px;
+    animation-fill-mode: both;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: 25px;
+      left: 0;
+      animation: loader-anim 1s -0.96s infinite linear;
+    }
+
+    &:nth-child(2) {
+      top: 17.04545px;
+      left: 17.04545px;
+      animation: loader-anim 1s -0.84s infinite linear;
+    }
+
+    &:nth-child(3) {
+      top: 0;
+      left: 25px;
+      animation: loader-anim 1s -0.72s infinite linear;
+    }
+
+    &:nth-child(4) {
+      top: -17.04545px;
+      left: -17.04545px;
+      animation: loader-anim 1s -0.6s infinite linear;
+    }
+
+    &:nth-child(5) {
+      top: -25px;
+      left: 0;
+      animation: loader-anim 1s -0.48s infinite linear;
+    }
+
+    &:nth-child(6) {
+      top: -17.04545px;
+      left: -17.04545px;
+      animation: loader-anim 1s -0.36s infinite linear;
+    }
+
+    &:nth-child(7) {
+      top: 0;
+      left: -25px;
+      animation: loader-anim 1s -0.24s infinite linear;
+    }
+
+    &:nth-child(8) {
+      top: 17.04545px;
+      left: -17.04545px;
+      animation: loader-anim 1s -0.12s infinite linear;
+    }
+
+    &:nth-child(9) {
+      top: -17.04545px;
+      left: 17.04545px;
+      animation: loader-anim 1s 0.12s infinite linear;
+    }
+  }
+}
+
+.successLogo {
+  width: 130px
+}
+
+@keyframes loader-anim {
+  50% {
+    opacity: 0.3;
+    transform: scale(0.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  } 
+}
+

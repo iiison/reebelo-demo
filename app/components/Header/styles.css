@@ -1,0 +1,37 @@
+.visaLogo {
+  width: 50px;
+  height: auto;
+  margin: 10px 5px 5px 5px;
+}
+
+.header {
+  border-bottom: 1px solid #999A99;
+  position: relative;
+}
+
+.back{
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  left: 12px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background: #999A99;
+    height: 3px;
+    width: 15px;
+    left: 0;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+    top: 21px;
+  }
+}

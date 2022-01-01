@@ -1,0 +1,6 @@
+@import "../../styles/base/_variables";
+
+.btn {
+  background-color: $theme-lighter;
+  color: $white;
+}
