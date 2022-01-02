@@ -8,13 +8,17 @@
     "start": "webpack-dev-server --config webpack.config.babel.js --color --progress --hot --inline --mode development",
     "analyze": "webpack-dev-server --config webpack.config.babel.js --color --progress --hot --inline --mode development",
     "prod": "webpack --mode production -p",
-    "prod:analyze": "webpack --mode production -p"
+    "prod:analyze": "webpack --mode production -p",
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",
     "moment": "^2.29.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-infinite-scroll-hook": "^4.0.1",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.0.0",
