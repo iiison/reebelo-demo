@@ -2,7 +2,7 @@
 
 @import "../base/_variables.module";
 
-:global{
+.root :global{
 
   .t-upper{
     text-transform: uppercase;

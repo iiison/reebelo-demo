@@ -1,16 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+/* ====================================================== *\
+    VENDOR - Default fall-backs and external files.
+\* ====================================================== */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import "base/_reset.module";
 
-* {
-  box-sizing: border-box;
-}
+/* ====================================================== *\
+      BASE - Base Variable file along with starting
+      point Mixins and Placeholders.
+\* ====================================================== */
+
+@import "base/_variables.module";
+
+@import "base/_base.module";
+
+/* ====================================================== *\
+      Grid - Main, and other responsive grids
+\* ====================================================== */
+
+@import "grid/_grid.module";
+
+/* ====================================================== *\
+      FRAMEWORK - Structure and layout.
+\* ====================================================== */
+
+@import "framework/_layout.module";
+
+@import "framework/_global.module";
+
