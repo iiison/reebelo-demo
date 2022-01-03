@@ -1,9 +1,11 @@
+.root {
+  position: relative;
+  z-index: 999;
+  height: 100%;
+}
+
 .root :global {
 
-  .root {
-    position: relative;
-    z-index: 999;
-  }
 
   .root,
   .app {

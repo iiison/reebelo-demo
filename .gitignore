@@ -60,3 +60,6 @@ coverage/*
 
 # Auto import files
 tags
+.next/
+.next
+

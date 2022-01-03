@@ -1,0 +1,6 @@
+@import "../../styles/base/_variables";
+
+.input {
+  padding: 10px;
+  outline: none;
+}

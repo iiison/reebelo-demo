@@ -1,0 +1,53 @@
+@import "../../styles/base/_variables";
+
+.options {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 400px;
+  transition: all 0.3s ease-in-out;
+  height: 0;
+  padding: $S;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  color: $white;
+  background-color: $main-dark;
+  outline: 1px solid transparent;
+}
+
+.option {
+  padding: 5px 10px;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $theme-lighter;
+  }
+}
+
+.select {
+  border: 1px solid $theme-lighter;
+  padding: 10px;
+
+  &:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid $theme-lighter;
+
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    .options {
+      height: auto;
+      outline-color: $theme-lighter;
+    }
+  }
+}

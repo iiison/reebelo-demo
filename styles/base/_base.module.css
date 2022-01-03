@@ -30,7 +30,7 @@ button{
 }
 
 
-:global{
+.root :global{
   .clearfix:after{
     content: "";
     display: table;

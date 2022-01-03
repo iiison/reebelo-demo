@@ -1,0 +1,32 @@
+/* ====================================================== *\
+    VENDOR - Default fall-backs and external files.
+\* ====================================================== */
+
+@import "base/_reset.module";
+
+/* ====================================================== *\
+      BASE - Base Variable file along with starting
+      point Mixins and Placeholders.
+\* ====================================================== */
+
+@import "base/_variables.module";
+
+@import "base/_base.module";
+
+/* ====================================================== *\
+      Grid - Main, and other responsive grids
+\* ====================================================== */
+
+@import "grid/_grid.module";
+
+/* ====================================================== *\
+      FRAMEWORK - Structure and layout.
+\* ====================================================== */
+
+@import "framework/_layout.module";
+
+@import "framework/_global.module";
+
+.root {
+  background-color: transparent;
+}

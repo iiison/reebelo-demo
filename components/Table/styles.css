@@ -1,0 +1,31 @@
+@import "../../styles/base/_variables";
+
+.striped {
+  border-collapse: collapse;
+
+  thead {
+    background-color: $theme-lighter;
+  }
+
+  tr {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(2n) {
+      background-color: $secondary;
+    }
+
+    &:hover {
+      background-color: $theme-light;
+      color: $main-dark;
+    }
+
+    td {
+      padding: $S;
+    }
+
+    &.highlighted{
+      background-color: #c15a11;
+    }
+  }
+}

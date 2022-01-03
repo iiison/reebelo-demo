@@ -1,3 +1,5 @@
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+
 const regexEqual = (x, y) => {
   return (
     x instanceof RegExp &&
@@ -19,7 +21,6 @@ module.exports = {
     if (oneOf) {
       const moduleCssRule = oneOf.oneOf.find(
         (rule) => regexEqual(rule.test, /\.module\.css$/)
-        // regexEqual(rule.test, /\.module\.(scss|sass)$/)
       );
 
       if (moduleCssRule) {
@@ -28,20 +29,57 @@ module.exports = {
         );
 
         if (cssLoader) {
-          console.log('*******************')
-          console.log(cssLoader)
-          console.log('*******************')
-
           cssLoader.options.modules.mode = 'local'
-          // cssLoader.options.modules = {
-          //   modules       : true,
-          //   sourceMap     : false,
-          //   camelCase     : true,
-          //   importLoaders : 3
-          // };
         }
       }
     }
+
+    // CSS Minimizer fix
+    config.optimization.minimizer = config.optimization.minimizer.filter( minimizer => {
+      return minimizer.constructor.name !== 'CssMinimizerPlugin';
+    });
+
+    // create new instance of CssMinimizerPlugin
+    // minimizerOptions === cssnano config
+    const plugin = new CssMinimizerPlugin({
+      minimizerOptions: {
+        // your cssnano configuration
+        preset: [
+          'default',
+          {
+            "calc"                   : true,
+            "cssDeclarationSorter"   : true,
+            "colormin"               : true,
+            "core"                   : true,
+            "discardDuplicates"      : true,
+            "discardOverridden"      : true,
+            "mergeLonghand"          : true,
+            "minifyFontValues"       : true,
+            "minifyParams"           : true,
+            "normalizeCharset"       : true,
+            "orderedValues"          : true,
+            "reduceDisplayValues"    : true,
+            "styleCache"             : true,
+            "uniqueSelectors"        : true,
+            "convertValues"          : true,
+            "discardComments"        : true,
+            "discardEmpty"           : true,
+            "discardUnused"          : true,
+            "filterPlugins"          : true,
+            "mergeIdents"            : true,
+            "mergeRules"             : true,
+            "minifySelectors"        : true,
+            "normalizeString"        : true,
+            "normalizeUrl"           : true,
+            "reduceBackgroundRepeat" : true,
+            "reduceTransforms"       : true,
+            "zindex"                 : true
+          },
+        ],
+      },
+    });
+
+    config.optimization.minimizer.push( plugin );
 
     return config
   },

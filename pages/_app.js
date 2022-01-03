@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../styles/globals.css'
-import '../styles/main.module.css'
+import Header from '../components/Header/Header'
+import styles from '../styles/globals.module.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <div className={`${styles.root} grid`}> <Header /><Component {...pageProps} /></div>
 }
 
 export default MyApp

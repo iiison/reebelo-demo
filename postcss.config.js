@@ -2,12 +2,14 @@
 /* global module :true */
 module.exports = {
   "plugins"   : [
+    'calc',
     'colorguard',
     'postcss-import',
     'postcss-extend',
     'postcss-mixins',
     'precss',
     'postcss-simple-vars',
+    'autoprefixer',
     'postcss-flexbugs-fixes',
     [
       "postcss-preset-env",
@@ -21,7 +23,7 @@ module.exports = {
           "custom-properties": false
         }
       }
-    ]
+    ],
   ]
 }
 
