@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 
 import dummyProds from './mockProds.json'
@@ -18,7 +19,7 @@ function renderProducts({ products }) {
               className={`col-3_md-4_sm-12 padded-s`}
               key={name}
             >
-              <a href={`products/${id}`} className='normal-color grid'>
+              <Link href={`products/${id}`} className='normal-color grid'>
                 <article
                   itemScope
                   itemType='http://schema.org/Product'
@@ -39,7 +40,7 @@ function renderProducts({ products }) {
                     </div>
                   </div>
                 </article>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
