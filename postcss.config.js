@@ -2,7 +2,7 @@
 /* global module :true */
 module.exports = {
   "plugins"   : [
-    'calc',
+    'postcss-calc',
     'colorguard',
     'postcss-import',
     'postcss-extend',
