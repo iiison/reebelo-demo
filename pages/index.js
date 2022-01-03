@@ -20,7 +20,7 @@ function renderProducts({ products }) {
               className={`col-3_md-4_sm-12 padded-s`}
               key={name}
             >
-              <Link href={`products/${id}`} className='normal-color grid' passHref>
+              <Link href={`/products/${id}`} className='normal-color grid' passHref>
                 <article
                   itemScope
                   itemType='http://schema.org/Product'
@@ -54,8 +54,8 @@ function renderProducts({ products }) {
   )
 }
 
-const useProductsState = () => {
-  const [ products, setItemsToState ] = useState([])
+const useProductsState = (initialState = []) => {
+  const [ products, setItemsToState ] = useState(initialState)
 
   const setProducts = newProds => {
     setItemsToState(prevProds => [...prevProds, ...newProds])
@@ -64,10 +64,14 @@ const useProductsState = () => {
   return [products, setProducts]
 }
 
-const Home = () => {
-  const [ products, setProducts ] = useProductsState()
+const Home = ({ prods }) => {
+  const [ products, setProducts ] = useProductsState(prods)
 
   useEffect(() => {
+    if (prods !== undefined) {
+      return
+    }
+
     const apiResponse = getMockProducts()
 
     setProducts(apiResponse)
@@ -97,6 +101,14 @@ const Home = () => {
       </div>
     </main>
   )
+}
+
+export const getServerSideProps = ({ params }) => {
+  return {
+    props : {
+      prods : getMockProducts()
+    }
+  }
 }
 
 export default Home

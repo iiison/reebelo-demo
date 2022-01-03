@@ -6,7 +6,7 @@ import Select from '../../components/Select/Select'
 import Modal from './modal'
 import styles from './styles.module.css'
 
-function getMockProducts() {
+function getMockProduct() {
   return {
     name : 'Awesome Product',
     price : 3332.99,
@@ -26,12 +26,16 @@ function getMockProducts() {
   }
 }
 
-const Product = () => {
-  const [ product, setProduct ] = useState({})
+const Product = ({ prod = {} }) => {
+  const [ product, setProduct ] = useState(prod)
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
-    const apiResponse = getMockProducts()
+    if (product.name !== undefined) {
+      return 
+    }
+
+    const apiResponse = getMockProduct()
 
     setProduct(apiResponse)
   }, [])
@@ -69,8 +73,10 @@ const Product = () => {
               >
                 <meta itemProp='priceCurrency' content='USD' />
                 <p className='col-12 grid-middle'>
-                  <h3 itemProp='price' className='dollar'>{product.price}&nbsp;</h3>
-                  (<span itemProp='availability'>{product.availability}</span>)
+                  <span itemProp='price' className={`dollar ${styles.price}`}>{product.price}&nbsp;</span>
+                  <span itemProp='availability' className={`t-capitalize`}>
+                    ({product.availability})
+                  </span>
                 </p>
               </section>
               <section
@@ -86,6 +92,7 @@ const Product = () => {
               <div className='col-12 grid-spaceBetween grid-middle'>
                 <div className='col-6_md-7'>
                   <Select
+                    id='Delivery-Opts'
                     onChange={()=>{}}
                     placeholder='Choose Delivery Options'
                     options={product.deliveryOptions}
@@ -107,5 +114,12 @@ const Product = () => {
   )
 }
 
+export const getServerSideProps = ({ params }) => {
+  return {
+    props : {
+      prod : getMockProduct()
+    }
+  }
+}
 export default Product
 

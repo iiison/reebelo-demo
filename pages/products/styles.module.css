@@ -37,6 +37,7 @@
 }
 
 .price {
+  font-size: 1.1em;
 }
 
 .meta {
@@ -64,5 +65,10 @@
   .content {
     background-color: $theme;
   }
+}
+
+.smalls {
+  font-size: $S;
+  margin-left: 5px;
 }
 

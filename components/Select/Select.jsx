@@ -43,7 +43,7 @@ export default function Select({
 
 Select.propTypes = {
   id          : PropTypes.string.isRequired,
-  options     : PropTypes.arrayOf(PropTypes.shape([PropTypes.string])),
+  options     : PropTypes.arrayOf(PropTypes.string),
   label       : PropTypes.string,
   value       : PropTypes.string,
   classes     : PropTypes.string,
