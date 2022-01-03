@@ -1,0 +1,41 @@
+@import "../../styles/base/_variables.module";
+
+.imgCont {
+  height: 450px;
+  max-width: 500px !important;
+
+  img {
+    max-width: 95%;
+  }
+}
+
+.price {
+}
+
+.meta {
+  li {
+    margin: 5px 0;
+    list-style: disc;
+    list-style-position: inside;
+  }
+}
+
+.button {
+  color: $white;
+  background-color: $theme-lighter;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $theme-light$h-b-visible;
+
+  .content {
+    background-color: $theme;
+  }
+}
+

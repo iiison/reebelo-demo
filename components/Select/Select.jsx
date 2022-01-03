@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { PropTypes } from 'prop-types'
 
-import styles from './styles.css'
+import styles from './styles.module.css'
 
 
 export default function Select({
