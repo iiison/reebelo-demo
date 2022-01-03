@@ -32,7 +32,11 @@ function renderProducts({ products }) {
                         <Image
                           alt={name}
                           itemProp='image'
-                          src={`https://via.placeholder.com/250/000000/FFFFFF/?text=${name}`}
+                          className={styles.img}
+                          src={`/250/000000/FFFFFF/?text=${name}`}
+                          layout='fixed'
+                          width='100%'
+                          height='100%'
                         />
                       </div>
                       <h2 itemProp='name' className={`col-12 ${styles.prodName}`}>{name}</h2>

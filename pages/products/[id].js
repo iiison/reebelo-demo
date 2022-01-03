@@ -48,9 +48,11 @@ const Product = () => {
           <div className='col-12 grid'>
             <div className={`col-6_sm-12 grid-middle grid-center ${styles.imgCont}`}>
               <Image
-                alt={product.name}
                 itemProp='image'
-                src={`https://via.placeholder.com/400/000000/FFFFFF/?text=${product.name}`}
+                alt={product.name}
+                className={styles.img}
+                layout='fill'
+                src={`/400/000000/FFFFFF/?text=${product.name}`}
               />
             </div>
             <div className='col-6_sm-12 grid-top'>

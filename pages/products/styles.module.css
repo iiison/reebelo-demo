@@ -3,9 +3,36 @@
 .imgCont {
   height: 450px;
   max-width: 500px !important;
+  position: relative;
 
-  img {
+  /* Next/Image temp fix */
+  span {
+    display: flex !important;
+    position: relative !important;
+    height: 450px !important;
+    flex-basis: 100%;
+    width: 100% !important;
+    max-width: 380px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto !important;
+      height: auto !important;
+      max-height: unset !important;
+      min-height: unset !important;
+      /* max-width: 90% !important; */
+      /* width: auto !important; */
+      /* position: static !important; */
+      /* min-width: unset !important; */
+    }
+  }
+  /*hack ends */
+  .img {
     max-width: 95%;
+    height: auto;
+    width: auto;
+    position: static;
   }
 }
 

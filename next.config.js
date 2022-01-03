@@ -85,6 +85,8 @@ module.exports = {
   },
 
   images : {
+    loader: 'imgix',
+    path: 'https://via.placeholder.com/',
     domains : ['via.placeholder.com']
   }
 }
