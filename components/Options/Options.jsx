@@ -26,7 +26,7 @@ export default function Options({
 
   useEffect(() => {
     onChange(value)
-  }, [value])
+  }, [value, onChange])
 
   return (
     <div className={`select-box grid col-12 ${classes}`}>

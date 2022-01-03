@@ -26,7 +26,7 @@ export default function TextInput({
     placeholder
   }
 
-  useEffect(() => onChange(value), [value])
+  useEffect(() => onChange(value), [value, onChange])
 
   return (
     <div className={`grid-middle col-12 ${classes}`}>

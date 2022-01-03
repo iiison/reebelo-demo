@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react'
+import Image from 'next/image'
 
 import Select from '../../components/Select/Select'
 
@@ -46,7 +47,7 @@ const Product = () => {
         >
           <div className='col-12 grid'>
             <div className={`col-6_sm-12 grid-middle grid-center ${styles.imgCont}`}>
-              <img
+              <Image
                 alt={product.name}
                 itemProp='image'
                 src={`https://via.placeholder.com/400/000000/FFFFFF/?text=${product.name}`}

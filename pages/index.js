@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import dummyProds from './mockProds.json'
 import styles from './styles.module.css'
@@ -19,7 +20,7 @@ function renderProducts({ products }) {
               className={`col-3_md-4_sm-12 padded-s`}
               key={name}
             >
-              <Link href={`products/${id}`} className='normal-color grid'>
+              <Link href={`products/${id}`} className='normal-color grid' passHref>
                 <article
                   itemScope
                   itemType='http://schema.org/Product'
@@ -28,7 +29,7 @@ function renderProducts({ products }) {
                   <div className='col-12 padded-s'>
                     <div className='grid-center'>
                       <div className={`col-12 grid-middle grid-center ${styles.prodImg}`}>
-                        <img
+                        <Image
                           alt={name}
                           itemProp='image'
                           src={`https://via.placeholder.com/250/000000/FFFFFF/?text=${name}`}

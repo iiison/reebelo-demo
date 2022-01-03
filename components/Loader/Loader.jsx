@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { PropTypes } from 'prop-types'
 
 import { VisaSuccessLogo } from '$COMPONENTS/icons/index';
@@ -8,7 +9,7 @@ const Loader = ({ message = 'Loading...', success }) => {
   return (
     <div className={`${styles.loader} grid-middle grid-center`}>
       {success ? (<div className='grid-center'>
-        <img className={`${styles.successLogo}`} src={VisaSuccessLogo} />
+        <Image className={`${styles.successLogo}`} src={VisaSuccessLogo} alt='success' />
       </div>) :
         <div className='grid-center'>
           <div className={styles.loaderCont}>
