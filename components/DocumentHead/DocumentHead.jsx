@@ -19,13 +19,13 @@ const DocumentHead = ({ title, description, img }) => {
       <meta property="og:type" content="article" />
       <meta property="og:title" content={title}/>
       <meta property="og:description" content={description}/>
-      {img && <meta property="og:image" content={img} />}
+      {img && <meta property="og:image" content={`https://via.placeholder.com/${img}`} />}
       <meta property="og:url" content="PERMALINK" />
       <meta property="og:site_name" content="Reebelo Demo" />
 
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {img && <meta name="twitter:image" content={img} /> }
+      {img && <meta name="twitter:image" content={`https://via.placeholder.com/${img}`} /> }
       <meta name="twitter:site" content="@iiisoni" />
       <meta name="twitter:creator" content="@iiisoni" />
     </Head>
