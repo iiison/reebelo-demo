@@ -2,6 +2,7 @@ import React, { useState, useEffect }  from 'react'
 import Image from 'next/image'
 
 import Select from '../../components/Select/Select'
+import DocumentHead from '../../components/DocumentHead/DocumentHead'
 
 import Modal from './modal'
 import styles from './styles.module.css'
@@ -40,10 +41,17 @@ const Product = ({ prod = {} }) => {
     setProduct(apiResponse)
   }, [])
 
+  const docHeadProps = {
+    title       : product.name,
+    description : product.desc,
+    img         : `/400/000000/FFFFFF/?text=${product.name}`
+  }
+
   return (
     product && product.name
     ? (
       <div className='col-12 padded-l'>
+        <DocumentHead {...docHeadProps} />
         <main
           className='col-12 grid'
           itemScope
