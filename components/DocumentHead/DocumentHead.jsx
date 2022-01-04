@@ -16,7 +16,7 @@ const DocumentHead = ({ title, description, img }) => {
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
 
-      <meta property="og:type" content="article" />
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={title}/>
       <meta property="og:description" content={description}/>
       {img && <meta property="og:image:secure_url" content={`https://via.placeholder.com/${img}`} />}
